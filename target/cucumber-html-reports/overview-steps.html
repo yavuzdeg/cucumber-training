@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>cucumber-framework-21</td>
+        <td>1</td>
+      <td>20 Jul 2021, 12:50</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">stepdefinitions.Google_Search_Step_Defs.close_the_application()</td>
+              <td>22</td>
+              <td class="duration" data-value="7315872368">7.315</td>
+              <td class="duration" data-value="7315872368">23.186</td>
+              <td class="duration" data-value="160949192100">2:40.949</td>
+              <td class="failed">95.45%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Google_Search_Step_Defs.user_in_on_the_google_page()</td>
+              <td>14</td>
+              <td class="duration" data-value="9694703928">9.694</td>
+              <td class="duration" data-value="9694703928">14.831</td>
+              <td class="duration" data-value="135725855000">2:15.725</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Google_Search_Step_Defs.user_search_for(java.lang.String)</td>
+              <td>11</td>
+              <td class="duration" data-value="6637578363">6.637</td>
+              <td class="duration" data-value="6637578363">10.234</td>
+              <td class="duration" data-value="73013362000">1:13.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Google_Search_Step_Defs.user_search_for_flower()</td>
+              <td>1</td>
+              <td class="duration" data-value="4357035100">4.357</td>
+              <td class="duration" data-value="4357035100">4.357</td>
+              <td class="duration" data-value="4357035100">4.357</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Google_Search_Step_Defs.user_search_for_i_phone()</td>
+              <td>1</td>
+              <td class="duration" data-value="4579149000">4.579</td>
+              <td class="duration" data-value="4579149000">4.579</td>
+              <td class="duration" data-value="4579149000">4.579</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Google_Search_Step_Defs.user_search_for_tea_pot()</td>
+              <td>1</td>
+              <td class="duration" data-value="4415635300">4.415</td>
+              <td class="duration" data-value="4415635300">4.415</td>
+              <td class="duration" data-value="4415635300">4.415</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Google_Search_Step_Defs.verify_the_result_has(java.lang.String)</td>
+              <td>11</td>
+              <td class="duration" data-value="76654809">0.076</td>
+              <td class="duration" data-value="76654809">0.168</td>
+              <td class="duration" data-value="843202900">0.843</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Google_Search_Step_Defs.verify_the_result_has_flower()</td>
+              <td>1</td>
+              <td class="duration" data-value="39011100">0.039</td>
+              <td class="duration" data-value="39011100">0.039</td>
+              <td class="duration" data-value="39011100">0.039</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Google_Search_Step_Defs.verify_the_result_has_i_phone()</td>
+              <td>1</td>
+              <td class="duration" data-value="53012100">0.053</td>
+              <td class="duration" data-value="53012100">0.053</td>
+              <td class="duration" data-value="53012100">0.053</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Google_Search_Step_Defs.verify_the_result_has_tea_pot()</td>
+              <td>1</td>
+              <td class="duration" data-value="53990900">0.053</td>
+              <td class="duration" data-value="53990900">0.053</td>
+              <td class="duration" data-value="53990900">0.053</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Login_Step_Defs.clicks_on_login_button()</td>
+              <td>8</td>
+              <td class="duration" data-value="18318719500">18.318</td>
+              <td class="duration" data-value="18318719500">23.061</td>
+              <td class="duration" data-value="146549756000">2:26.549</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Login_Step_Defs.user_enters_manager_id(java.lang.String)</td>
+              <td>8</td>
+              <td class="duration" data-value="1179673862">1.179</td>
+              <td class="duration" data-value="1179673862">2.067</td>
+              <td class="duration" data-value="9437390900">9.437</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Login_Step_Defs.user_enters_manager_password(java.lang.String)</td>
+              <td>8</td>
+              <td class="duration" data-value="761061912">0.761</td>
+              <td class="duration" data-value="761061912">1.308</td>
+              <td class="duration" data-value="6088495300">6.088</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Login_Step_Defs.user_is_on_the_application_login_page()</td>
+              <td>8</td>
+              <td class="duration" data-value="18215572262">18.215</td>
+              <td class="duration" data-value="18215572262">27.133</td>
+              <td class="duration" data-value="145724578100">2:25.724</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Login_Step_Defs.verify_login_is_displayed(java.lang.String)</td>
+              <td>8</td>
+              <td class="duration" data-value="178548812">0.178</td>
+              <td class="duration" data-value="178548812">0.360</td>
+              <td class="duration" data-value="1428390500">1.428</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Room_Reservation_Step_Defs.user_clicks_on_the_approved_checkbox()</td>
+              <td>1</td>
+              <td class="duration" data-value="324079600">0.324</td>
+              <td class="duration" data-value="324079600">0.324</td>
+              <td class="duration" data-value="324079600">0.324</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Room_Reservation_Step_Defs.user_clicks_on_the_is_paid_checkbox()</td>
+              <td>1</td>
+              <td class="duration" data-value="379114000">0.379</td>
+              <td class="duration" data-value="379114000">0.379</td>
+              <td class="duration" data-value="379114000">0.379</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Room_Reservation_Step_Defs.user_clicks_on_the_save_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="457145000">0.457</td>
+              <td class="duration" data-value="457145000">0.457</td>
+              <td class="duration" data-value="457145000">0.457</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Room_Reservation_Step_Defs.user_enters_the_adult_amount()</td>
+              <td>1</td>
+              <td class="duration" data-value="173043200">0.173</td>
+              <td class="duration" data-value="173043200">0.173</td>
+              <td class="duration" data-value="173043200">0.173</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Room_Reservation_Step_Defs.user_enters_the_children_amount()</td>
+              <td>1</td>
+              <td class="duration" data-value="386096500">0.386</td>
+              <td class="duration" data-value="386096500">0.386</td>
+              <td class="duration" data-value="386096500">0.386</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Room_Reservation_Step_Defs.user_enters_the_contact_email()</td>
+              <td>1</td>
+              <td class="duration" data-value="966239100">0.966</td>
+              <td class="duration" data-value="966239100">0.966</td>
+              <td class="duration" data-value="966239100">0.966</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Room_Reservation_Step_Defs.user_enters_the_contact_name()</td>
+              <td>1</td>
+              <td class="duration" data-value="1711443500">1.711</td>
+              <td class="duration" data-value="1711443500">1.711</td>
+              <td class="duration" data-value="1711443500">1.711</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Room_Reservation_Step_Defs.user_enters_the_contact_phone()</td>
+              <td>1</td>
+              <td class="duration" data-value="700147900">0.700</td>
+              <td class="duration" data-value="700147900">0.700</td>
+              <td class="duration" data-value="700147900">0.700</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Room_Reservation_Step_Defs.user_enters_the_date_end()</td>
+              <td>1</td>
+              <td class="duration" data-value="796198000">0.796</td>
+              <td class="duration" data-value="796198000">0.796</td>
+              <td class="duration" data-value="796198000">0.796</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Room_Reservation_Step_Defs.user_enters_the_date_start()</td>
+              <td>1</td>
+              <td class="duration" data-value="1734414100">1.734</td>
+              <td class="duration" data-value="1734414100">1.734</td>
+              <td class="duration" data-value="1734414100">1.734</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Room_Reservation_Step_Defs.user_enters_the_id_hotel()</td>
+              <td>1</td>
+              <td class="duration" data-value="898222700">0.898</td>
+              <td class="duration" data-value="898222700">0.898</td>
+              <td class="duration" data-value="898222700">0.898</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Room_Reservation_Step_Defs.user_enters_the_id_user()</td>
+              <td>1</td>
+              <td class="duration" data-value="3478879000">3.478</td>
+              <td class="duration" data-value="3478879000">3.478</td>
+              <td class="duration" data-value="3478879000">3.478</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Room_Reservation_Step_Defs.user_enters_the_notes()</td>
+              <td>1</td>
+              <td class="duration" data-value="557142800">0.557</td>
+              <td class="duration" data-value="557142800">0.557</td>
+              <td class="duration" data-value="557142800">0.557</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Room_Reservation_Step_Defs.user_enters_the_price()</td>
+              <td>1</td>
+              <td class="duration" data-value="982270400">0.982</td>
+              <td class="duration" data-value="982270400">0.982</td>
+              <td class="duration" data-value="982270400">0.982</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Room_Reservation_Step_Defs.user_navigates_to_create_room_reservation_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="12094030700">12.094</td>
+              <td class="duration" data-value="12094030700">12.094</td>
+              <td class="duration" data-value="12094030700">12.094</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Room_Reservation_Step_Defs.user_verifies_the_success_message()</td>
+              <td>1</td>
+              <td class="duration" data-value="31423870900">31.423</td>
+              <td class="duration" data-value="31423870900">31.423</td>
+              <td class="duration" data-value="31423870900">31.423</td>
+              <td class="failed">0.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>31</td>
+            <td>120</td>
+            <td class="duration">6.252</td>
+            <td class="duration">2:40.949</td>
+            <td class="duration">12:30.320</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

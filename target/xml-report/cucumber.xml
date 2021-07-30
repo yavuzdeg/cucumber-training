@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="173.353">
+    <testcase classname="Finding product on google search" name="TC01_iphone_search" time="82.424">
+        <system-out>
+            <![CDATA[Given user in on the google page............................................passed
+Given user search for "iPhone"..............................................passed
+Then verify the result has "iPhone".........................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Finding product on google search" name="TC02_bmw_search" time="16.268">
+        <system-out>
+            <![CDATA[Given user in on the google page............................................passed
+Given user search for "bmw".................................................passed
+Then verify the result has "bmw"............................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Finding product on google search" name="TC03_tesla_search" time="23.449">
+        <system-out>
+            <![CDATA[Given user in on the google page............................................passed
+Given user search for "tesla"...............................................passed
+Then verify the result has "tesla"..........................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Search Functionality" name="TC01_Iphone Search" time="14.815">
+        <system-out>
+            <![CDATA[Given user in on the google page............................................passed
+And user search for iPhone..................................................passed
+Then verify the result has iPhone...........................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Search Functionality" name="TC02_tea pot Search" time="12.544">
+        <system-out>
+            <![CDATA[Given user in on the google page............................................passed
+And user search for tea pot.................................................passed
+Then verify the result has tea pot..........................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Search Functionality" name="TC03_flower Search" time="21.156">
+        <system-out>
+            <![CDATA[Given user in on the google page............................................passed
+And user search for flower..................................................passed
+Then verify the result has flower...........................................passed
+Then close the application..................................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
